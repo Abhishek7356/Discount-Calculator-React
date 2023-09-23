@@ -1,0 +1,175 @@
+.mainBox {
+    display: flex;
+    background: transparent linear-gradient(116deg, #46046E 0%, #470FA1 57%, #470FA2 100%) 0% 0% no-repeat padding-box;
+
+}
+
+.appIcon {
+    width: 400px;
+    height: auto;
+    object-fit: contain;
+    margin-top: -20px;
+}
+
+.containerDiv {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.heading {
+    font-size: 58px;
+    line-height: 65px;
+    text-align: left;
+    margin: 0 0 9px;
+    color: transparent;
+    background: transparent linear-gradient(261deg, #FF7B97 0%, #F7A383 44%, #EFC772 73%, #F6CF7E 100%) 0% 0% no-repeat padding-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 70px;
+}
+
+.desc {
+    color: #f2e7e7;
+    font-weight: 500;
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-family: 'Abel';
+}
+
+.main {
+    width: 78%;
+    /* height: 80vh; */
+    background: transparent linear-gradient(239deg, #FF8AA3 0%, #EFC772 49%, #F6CF7E 100%) 0% 0% no-repeat padding-box;
+    border-radius: 13px;
+    /* transform: translate(0, -140px); */
+    margin-top: -140px;
+    margin-bottom: 50px;
+    padding: 40px 20px;
+}
+
+.discountCalculator {
+    text-align: center;
+    letter-spacing: 0;
+    color: #0b0757;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.description {
+    text-align: center;
+    letter-spacing: 0.18px;
+    color: #272727;
+    font-family: 'Abel';
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.discount {
+    display: flex;
+    padding: 30px;
+}
+
+.input {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input .label {
+    font-size: 25px;
+    color: #141414;
+    font-weight: 500;
+}
+
+.resultBox {
+    width: 50%;
+    /* height: 350px; */
+    padding-bottom: 30px;
+    margin-left: 50px;
+    background-color: #f2e7e7;
+    border-radius: 10px;
+}
+
+.discountCalculator2 {
+    text-align: center;
+    letter-spacing: 0;
+    background-color: #0b0757;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    border-radius: 10px 10px 0 0;
+    padding: 20px 0;
+    box-shadow: 0 5px 10px rgb(128, 127, 127);
+}
+
+.priceTag {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    color: #434242;
+    margin-top: 30px;
+}
+
+.amountDetails {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.discountedDetails {
+    text-align: center;
+    letter-spacing: 0;
+    color: #0b0757b4;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.inputamout {
+    background: transparent !important;
+    border: 1px solid rgb(91, 89, 89) !important;
+    padding: 13px !important;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .containerDiv {
+        height: 113vh;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .heading {
+        font-size: 37px;
+    }
+    .main {
+        width: 100%;
+        margin-top: -55px;
+    }
+    .discount {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        padding: 0px;
+    }
+    .input {
+        width: 80%;
+        gap: 30px;
+    }
+    .resultBox {
+        width: 85%;
+        margin-left: 0px;
+    }
+    
+}
