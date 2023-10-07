@@ -2,6 +2,8 @@ import React from 'react'
 import './main.css'
 import { useState } from 'react'
 import Button from '@mui/material/Button';
+import { motion } from 'framer-motion'
+import { duration } from '@mui/material';
 // import TextField from '@mui/material/TextField';
 
 
@@ -35,32 +37,52 @@ function Main() {
                 <div className="container">
                     <div className="containerDiv">
                         <div>
-                            <h1 style={{ fontFamily: 'Josefin+Sans' }} className='heading'>Discount Calculator <br /> Online</h1>
-                            <p className='desc'>Calculate The Discount Amount In A Few Seconds</p>
+                            <motion.h1 transition={{ duration: '.20' }} initial={{ x: '-600px', opacity: '0' }}
+                                whileInView={{ x: '0px', opacity: '1' }}
+                                viewport={{ once: true }} style={{ fontFamily: 'Josefin+Sans' }} className='heading'>Discount Calculator <br /> Online</motion.h1>
+                            <motion.p transition={{ duration: '.20', delay: '.10' }} initial={{ x: '-600px', opacity: '0' }}
+                                whileInView={{ x: '0px', opacity: '1' }}
+                                viewport={{ once: true }} className='desc'>Calculate The Discount Amount In A Few Seconds</motion.p>
                         </div>
-                        <img className='appIcon' src="https://d2kh7o38xye1vj.cloudfront.net/wp-content/uploads/2023/07/discountMainBanner.png" alt="" />
+                        <motion.img transition={{ duration: '.20' }} initial={{ x: '400px', opacity: '0' }}
+                            whileInView={{ x: '10px', opacity: '1' }}
+                            viewport={{ once: true }} className='appIcon' src="https://d2kh7o38xye1vj.cloudfront.net/wp-content/uploads/2023/07/discountMainBanner.png" alt="" />
                     </div>
                 </div>
             </div>
-            <div className="main container shadow">
-                <h1 className='discountCalculator'>Instant Discount Calculator</h1>
-                <p className="description">Use the discount calculator to find out the exact amount you will save!</p>
+            <motion.div transition={{ duration: '.20', delay: '.20' }} initial={{ x: '-1000px', opacity: '0' }}
+                whileInView={{ x: '0px', opacity: '1' }}
+                viewport={{ once: true }} className="main container shadow">
+                <motion.h1 transition={{ duration: '.20', delay: '.10' }} initial={{ y: '50px', opacity: '0' }}
+                    whileInView={{ y: '-20px', opacity: '1' }}
+                    viewport={{ once: true }} className='discountCalculator'>Instant Discount Calculator</motion.h1>
+                <motion.p transition={{ duration: '.20', delay: '.10' }} initial={{ y: '50px', opacity: '0' }}
+                    whileInView={{ y: '-20px', opacity: '1' }}
+                    viewport={{ once: true }} className="description">Use the discount calculator to find out the exact amount you will save!</motion.p>
                 <div className="discount">
                     <div className='input'>
-                        <div className='details'>
+                        <motion.div transition={{ duration: '.20' }} initial={{ y: '50px' }}
+                            whileInView={{ y: '-20px' }}
+                            viewport={{ once: true }} className='details'>
                             <label className='label'>Amount (₹)</label>
                             <input onChange={(e) => handleAmount(e)} value={amount} className='inputamout form-control' type='number' placeholder='Enter Amount' />
-                        </div>
-                        <div className='details'>
+                        </motion.div>
+                        <motion.div transition={{ duration: '.20' }} initial={{ y: '50px' }}
+                            whileInView={{ y: '-20px' }}
+                            viewport={{ once: true }} className='details'>
                             <label className='label' >Discount applied (%)</label>
                             <input onChange={(e) => handleRate(e)} value={rate} className='inputamout form-control' type='number' placeholder='Enter discount value in %' />
-                        </div>
-                        <div>
+                        </motion.div>
+                        <motion.div transition={{ duration: '.20' }} initial={{ y: '50px' }}
+                            whileInView={{ y: '-20px' }}
+                            viewport={{ once: true }}>
                             <Button onClick={handleDiscount} variant="contained" className='ms-2'>Submit</Button>
                             <Button onClick={handleReset} variant="contained" className='ms-2'>Reset</Button>
-                        </div>
+                        </motion.div>
                     </div>
-                    <div className="resultBox shadow">
+                    <motion.div transition={{ duration: '.20' }} initial={{ y: '50px' }}
+                        whileInView={{ y: '-20px' }}
+                        viewport={{ once: true }} className="resultBox shadow">
                         <h1 className='discountCalculator2'>Amount Paid</h1>
                         <h3 className='priceTag'>New Price</h3>
                         <h1 className='discountCalculator'>₹ {discound}</h1>
@@ -74,9 +96,9 @@ function Main() {
                                 <h1 className='discountedDetails'>₹ {amount}</h1>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
-            </div>
+            </motion.div>
         </div>
 
     )
